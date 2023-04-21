@@ -1,4 +1,3 @@
-// import { Switch, Route } from "react-router-dom";
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
