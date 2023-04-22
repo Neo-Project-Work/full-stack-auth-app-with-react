@@ -30,7 +30,7 @@ export const LoginComponent = () => {
           path: "/",
         });
         // redirect user to the auth page
-        window.location.href = "/auth";
+        window.location.href = "/admin";
 
         setLogin(true);
       })

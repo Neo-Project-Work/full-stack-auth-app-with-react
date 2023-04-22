@@ -11,8 +11,7 @@ export const RegisterComponent = () => {
   const handleSubmit = (e) => {
     // prevent the form from refreshing the whole page
     e.preventDefault();
-    // make a popup alert showing the "submitted" text
-    // alert("Submited");
+    
     // set configurations
     const configuration = {
       method: "post",

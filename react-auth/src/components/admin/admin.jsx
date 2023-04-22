@@ -18,9 +18,10 @@ export default function AdminComponent() {
     // set configurations for the API call here
     const configuration = {
       method: "get",
-      url: "https://nodejs-mongodb-auth-app.herokuapp.com/auth-endpoint",
+      url: "https://nodejs-auth-app-0dzk.onrender.com/admin-endpoint",
       headers: {
         Authorization: `Bearer ${token}`,
+        "access-control-allow-origin" : "*",
       },
     };
 
