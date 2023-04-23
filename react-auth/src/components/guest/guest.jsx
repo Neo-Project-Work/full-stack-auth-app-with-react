@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default function GuestComponent() {
     const [message, setMessage] = useState("");
-    // const [isPending, setIsPending] = useState(false);
+    const [isPending, setIsPending] = useState(false);
 
   // useEffect automatically executes once the page is fully loaded
   useEffect(() => {
@@ -21,17 +21,15 @@ export default function GuestComponent() {
       })
       .catch((error) => {
         error = new Error();
-      });
+      }).finally(() => setIsPending(false));
   }, [])
-    
 
     return (
         <div>
         <h1 className="text-center">Guest Site</h1>
-  
         {/* displaying our message from our API call */}
-        {/* {isPending && <div className="loading-text">Loading...</div>} */}
-        <h3 className="text-center text-danger">{message}</h3>
+        { isPending && <div className="text-center text-danger">Loading...</div>}
+        { !isPending && <h3 className="text-center text-danger">{message}</h3>}
       </div>
     )
 }
