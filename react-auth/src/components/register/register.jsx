@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
+import "./register.css"
 
 export const RegisterComponent = () => {
   const [email, setEmail] = useState("");
@@ -33,7 +34,7 @@ export const RegisterComponent = () => {
   return (
     <>
       <h2>Register</h2>
-      <Form onSubmit={(e)=>handleSubmit(e)}>
+      <Form className="register-form" onSubmit={(e)=>handleSubmit(e)}>
         {/* email */}
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -60,6 +61,7 @@ export const RegisterComponent = () => {
 
         {/* submit button */}
         <Button
+          className="register-button"
           variant="primary"
           type="submit"
           onClick={(e) => handleSubmit(e)}

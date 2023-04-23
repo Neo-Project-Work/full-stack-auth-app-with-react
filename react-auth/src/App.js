@@ -26,15 +26,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route exact path="/guest" element={<GuestComponent />} />
-        {/* <Route
-          component={
-            <ProtectedRoutes path="/admin" element={<AdminComponent />} />
-          }
-        /> */}
         <Route element={ <ProtectedRoutes /> }>
           <Route element={ <AdminComponent /> } path="/admin" exact/>
         </Route>
-        
       </Routes>
     </Container>
   );

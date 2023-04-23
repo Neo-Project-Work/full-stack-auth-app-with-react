@@ -2,6 +2,7 @@ import axios from "axios";
 import { React, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import Cookies from "universal-cookie";
+import "./login.css"
 const cookies = new Cookies();
 
 export const LoginComponent = () => {
@@ -42,7 +43,7 @@ export const LoginComponent = () => {
   return (
     <>
       <h2>Login</h2>
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <Form className="register-form" onSubmit={(e) => handleSubmit(e)}>
         {/* email */}
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -68,7 +69,10 @@ export const LoginComponent = () => {
         </Form.Group>
 
         {/* submit button */}
-        <Button variant="primary" type="submit">
+        <Button 
+        className="login-button"
+        variant="primary" 
+        type="submit">
           Submit
         </Button>
         {/* display success message */}

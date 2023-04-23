@@ -19,8 +19,21 @@ code {
 
 #navigation a{
   margin-right: 10%;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: black;
 }
 
 #navigation a:last-child{
   margin-right: 0;
+}
+
+.container {
+  padding: 80px;
+}
+#root {
+  background-color: burlywood;
+  width: auto;
+  height:900px
 }
