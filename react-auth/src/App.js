@@ -21,8 +21,6 @@ function App() {
           </section>
         </Col>
       </Row>
-
-      {/* create routes here */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route exact path="/guest" element={<GuestComponent />} />
