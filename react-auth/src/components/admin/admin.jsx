@@ -50,7 +50,7 @@ export default function AdminComponent() {
 
       {/* displaying our message from our API call */}
       <h3 className="text-danger">{message}</h3>
-
+    
       {/* logout */}
       <Button type="submit" variant="danger" onClick={() => logout()}>
         Logout
